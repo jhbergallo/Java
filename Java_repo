@@ -1,0 +1,128 @@
+import java.util.*;
+public class BibliotecaJH
+{
+   public static double biggestTwo(double a, double b){//returns the biggest of two numbers
+       return (a + b + Math.abs(a - b))/2;
+   }
+
+   public static double biggestThree(double a, double b, double c){//returns the biggest of three numbers
+        double aEb = (a + b + Math.abs(a - b))/2;
+        if (aEb > c) {
+            return aEb;
+        } else {
+            return c;
+        }
+   }
+
+   public static double biggest3(double a, double b, double c){//another way of returning the biggest of 3 numbers
+        if (a > b) {
+            if (a > c){
+                return a;
+            } else {
+                return c;
+            }
+        } else {
+            if (b>c){
+                return b;
+            } else {
+                return c;
+            }
+        }
+   }
+
+   public static void bhaskara (String args[]){//calculates the bhaskara formule
+        Scanner read = new Scanner(System.in);
+        System.out.println("\fType a");
+        double a = read.nextDouble();
+        System.out.println("Type b");
+        double b = rad.nextDouble();
+        System.out.println("Type c:");
+        double c = read.nextDouble();
+        if (a == 0){
+            System.out.println("Not a second degree function");
+        } else{
+           double delta = (b*b) - (4*a*c);
+           if (delta < 0){
+               System.out.println("Doesn't have a root");
+            } else {
+                double x1 = (-b + Math.sqrt(delta))/(2*a);
+                double x2 = (-b - Math.sqrt(delta))/(2*a);
+                System.out.println("x1= " + Math.round(x1) + " x2= " + Math.round(x2));
+            }
+        }
+    }
+
+   public static int reverseNumber(int number){ //reverses the order of a number
+       int cent = number/100;
+       int rest = number%100;
+       int ten = rest/10;
+       int unit = rest%10;
+       int result = (unit * 100) + (ten * 10) + (cent * 1);
+       return result;
+    }
+
+   public static double squareArea (double side){//returns the area of a square
+        return side*side;
+    }
+
+   public  static double rectangleArea (double side1, double side2)
+    {//receives both sides of the rectangle and multiplies them
+        return side1*side2;
+    }
+
+   public  static double circleArea (double radius)
+    {//receives the radius of a circle and returns the area
+        return Math.PI*radius*radius;
+
+    }
+
+   public  static double triangleArea (double base, double height)
+    {//receives the base and height of a triangle and returns its area
+        return (base*height)/2.;
+    }
+
+   public  static double volumeParalelepipedo(double lado1, double lado2,double lado3)
+    {//recebe os 3 lados de um paralelepipedo e retorna o volume
+        return (lado1*lado2*lado3);
+        //return lado1*lado2*lado3;
+    }
+
+   public  static double volumePiramide(double ladobase1,double ladobase2,double altura)
+    {//recebe os lados da base e a altura de uma piramide e retorna seu volume
+        return (ladobase1*ladobase2*altura)/3.;
+    }
+
+   public  static double volumeCilindro(double raio,double altura)
+    {//recebe os raio da base e a altura de um cilindro e retorna seu volume
+        return (Math.PI*Math.pow(raio,2)*altura);
+    }
+
+   public  static double volumeEsfera(double raio)
+    {//recebe os raio de uma esfera e retorna seu volume
+        return (4*Math.PI*Math.pow(raio,3)/3);
+    }
+
+   public  static double superficieParalelepipedo(double lado1, double lado2,double lado3)
+    { // retorna a area da superfÃ­cie do paralelepipedo
+        return (2*lado1*lado2+2*lado1*lado3+2*lado2*lado3);
+    }
+
+   public  static double superficiePiramide(double ladobase1,double ladobase2,double altura)
+    {//recebe o lado da base e a altura de uma piramide e retorna a area de sua superficie
+        double alturaLado1 = Math.sqrt( Math.pow(ladobase1/2.,2) + Math.pow(altura,2));
+        double alturaLado2 = Math.sqrt( Math.pow(ladobase2/2.,2) + Math.pow(altura,2));
+        double areaTriangulo1 = (alturaLado1*ladobase1)/2.;
+        double areaTriangulo2 = (alturaLado2*ladobase2)/2.;
+        return (2*(areaTriangulo1)+2*(areaTriangulo2)+ ladobase1*ladobase2);
+    }
+
+   public  static double superficieCilindro(double raio,double altura)
+    {//recebe os raio da base e a altura de um cilindro e retorna sua area superficial
+        return (2*Math.PI*Math.pow(raio,2)+2*Math.PI*raio*altura);
+    }
+
+   public  static double superficieEsfera(double raio)
+    {//recebe os raio de uma esfera e retorna seu volume
+        return (4*Math.PI*Math.pow(raio,2));
+    }
+}
