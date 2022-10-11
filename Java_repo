@@ -126,8 +126,7 @@ public class BibliotecaJH
       //boolean method to see if a number is even or odd
         if(num%2==0){
           return true;
-        }
-        else {
+        } else {
           return false;
         }
     }
@@ -137,91 +136,91 @@ public class BibliotecaJH
 
         if(num%2==0){
            System.out.print("The number is even");
-        }
-        else{
+        } else{
            System.out.print("The number is odd");
         }
     }
 
-    public static boolean divisor(int num1, int num2){ //retorna true ou falso se o num2 é divisivel pelo num1
-        if(num2%num1==0)
+    public static boolean divider(int num1, int num2){
+       //returns true or false if num2 is divisible by num1
+        if(num2%num1==0){
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
-    public static boolean multiplo(int num1, int num2){// retorna true ou false se o num1 for multiplo de 2. ex.: se 175 é multiplo de 5 = true
-        if(num1%num2==0)
+    public static boolean multiple(int num1, int num2){
+      //returns true or false if num2 is a multiple of num2
+        if(num1%num2==0){
             return true;
-        else
+        } else
             return false;
+          }
     }
 
-    public static void ordemCrescente(int num1, int num2, int num3){
-        if(num1 < num2 && num1 < num3 && num2 < num3)      System.out.print(num1 + "," + num2 + " e " + num3);
-            else if(num1 < num2 && num1 < num3 && num3 < num2) System.out.print(num1 + "," + num3 + " e " + num2);
-
-            else if(num2 < num1 && num2 < num3 && num1 < num3) System.out.print(num2 + "," + num1 + " e " + num3);
-            else if(num2 < num1 && num2 < num3 && num3 < num2) System.out.print(num2 + "," + num3 + " e " + num1);
-
-            else if(num3 < num1 && num3 < num2 && num2 < num3) System.out.print(num3 + "," + num2 + " e " + num3);
-            else if(num3 < num1 && num3 < num2 && num3 < num2) System.out.print(num3 + "," + num3 + " e " + num2);
-
-            else System.out.print("\fExistem valores iguais.");
+    public static void ascendingOrder(int num1, int num2, int num3){
+      //receives three numbers and returns them in ascending order
+        if(num1 < num2 && num1 < num3 && num2 < num3) {System.out.print(num1 + "," + num2 + " e " + num3);}
+            else if(num1 < num2 && num1 < num3 && num3 < num2){ System.out.print(num1 + "," + num3 + " e " + num2);}
+            else if(num2 < num1 && num2 < num3 && num1 < num3){ System.out.print(num2 + "," + num1 + " e " + num3);}
+            else if(num2 < num1 && num2 < num3 && num3 < num2){ System.out.print(num2 + "," + num3 + " e " + num1);}
+            else if(num3 < num1 && num3 < num2 && num2 < num3){ System.out.print(num3 + "," + num2 + " e " + num3);}
+            else if(num3 < num1 && num3 < num2 && num3 < num2){ System.out.print(num3 + "," + num3 + " e " + num2);}
+            else { System.out.print("\fThere are equal numbers");}
     }
 
-    public static void ordemDecrescente(int num1, int num2, int num3){
-        if(num1 > num2 && num1 > num3 && num2 > num3)      System.out.print(num1 + "," + num2 + " e " + num3);
-        else if(num1 > num2 && num1 > num3 && num3 > num2) System.out.print(num1 + "," + num3 + " e " + num2);
-
-        else if(num2 > num1 && num2 > num3 && num1 > num3) System.out.print(num2 + "," + num1 + " e " + num3);
-        else if(num2 > num1 && num2 > num3 && num3 > num2) System.out.print(num2 + "," + num3 + " e " + num1);
-
-        else if(num3 > num1 && num3 > num2 && num2 > num3) System.out.print(num3 + "," + num2 + " e " + num3);
-        else if(num3 > num1 && num3 > num2 && num3 > num2) System.out.print(num3 + "," + num1 + " e " + num2);
-
-        else System.out.print("\fExistem valores iguais.");
+    public static void descendingOrder(int num1, int num2, int num3){
+      //receives three numbers and returns them in descending order
+        if(num1 > num2 && num1 > num3 && num2 > num3){ System.out.print(num1 + "," + num2 + " e " + num3);}
+        else if(num1 > num2 && num1 > num3 && num3 > num2){ System.out.print(num1 + "," + num3 + " e " + num2);}
+        else if(num2 > num1 && num2 > num3 && num1 > num3){ System.out.print(num2 + "," + num1 + " e " + num3);}
+        else if(num2 > num1 && num2 > num3 && num3 > num2){ System.out.print(num2 + "," + num3 + " e " + num1);}
+        else if(num3 > num1 && num3 > num2 && num2 > num3){ System.out.print(num3 + "," + num2 + " e " + num3);}
+        else if(num3 > num1 && num3 > num2 && num3 > num2){ System.out.print(num3 + "," + num1 + " e " + num2);}
+        else { System.out.print("\fThere are equal numbers");}
     }
 
-   public static void signo(int dia, int mes){
-        if(dia >= 21 && mes == 3 || dia <=20 && mes == 4)        System.out.print("Áries");
-        else if(dia >= 21 && mes == 4  || dia <=20 && mes == 5)  System.out.print("Touro");
-        else if(dia >= 21 && mes == 5  || dia <=20 && mes == 6)  System.out.print("Gêmeos");
-        else if(dia >= 21 && mes == 6  || dia <=21 && mes == 7)  System.out.print("Câncer");
-        else if(dia >= 22 && mes == 7  || dia <=22 && mes == 8)  System.out.print("Leão");
-        else if(dia >= 23 && mes == 8  || dia <=21 && mes == 9)  System.out.print("Virgem");
-        else if(dia >= 22 && mes == 9  || dia <=22 && mes == 10) System.out.print("Libra");
-        else if(dia >= 23 && mes == 10 || dia <=21 && mes == 11) System.out.print("Escorpião");
-        else if(dia >= 22 && mes == 11 || dia <=21 && mes == 12) System.out.print("Sagitário");
-        else if(dia >= 22 && mes == 12 || dia <=20 && mes == 1)  System.out.print("Capricórnio");
-        else if(dia >= 22 && mes == 1  || dia <=19 && mes == 2)  System.out.print("Aquário");
-        else if(dia >= 20 && mes == 2  || dia <=20 && mes == 3)  System.out.print("Peixes");
+   public static void sign(int day, int month){
+     //receives a day and a month and returns the zodiac sign of that date
+        if(day >= 21 && month == 3 || day <=20 && month == 4){       System.out.print("Aries");}
+        else if(day >= 21 && month == 4  || day <=20 && month == 5){ System.out.print("Taurus");}
+        else if(day >= 21 && month == 5  || day <=20 && month == 6){ System.out.print("Gemini");}
+        else if(day >= 21 && month == 6  || day <=21 && month == 7){ System.out.print("Cancer");}
+        else if(day >= 22 && month == 7  || day <=22 && month == 8){ System.out.print("Leo");}
+        else if(day >= 23 && month == 8  || day <=21 && month == 9){ System.out.print("Virgo");}
+        else if(day >= 22 && month == 9  || day <=22 && month == 10){System.out.print("Libra");}
+        else if(day >= 23 && month == 10 || day <=21 && month == 11){System.out.print("Scorpion");}
+        else if(day >= 22 && month == 11 || day <=21 && month == 12){System.out.print("Sagittarius");}
+        else if(day >= 22 && month == 12 || day <=20 && month == 1){ System.out.print("Capricorn");}
+        else if(day >= 22 && month == 1  || day <=19 && month == 2){ System.out.print("Aquarius");}
+        else if(day >= 20 && month == 2  || day <=20 && month == 3){ System.out.print("Pisces");}
 
-        else System.out.print("\fA data é inválida.");
+        else{ System.out.print("\fThe date is invalid.");}
    }
 
-   public static void vogais(String args[]){//retorna a quantidade de vogais e consoantes de um nome
+   public static void vowels(String args[]){
+     //returns the amount of vowels and consonants of a name
        Scanner in = new Scanner(System.in);
-       System.out.println("\fDigite o nome");
-       String nome = in.nextLine();
-       System.out.println("O nome digitado foi " + nome);
-       nome = nome.replaceAll(" ", "").toLowerCase();
-       int vogais = 0;
-       int consoantes = 0;
-       int tamanho = nome.length();
-       for (int posicao = 0; posicao < tamanho; posicao++){
-           char letra = nome.charAt(posicao);
-           switch(letra){
-               case 'a': vogais++;break;
-               case 'e': vogais++;break;
-               case 'i': vogais++;break;
-               case 'o': vogais++;break;
-               case 'u': vogais++;break;
+       System.out.println("\fType in the name");
+       String name = in.nextLine();
+       System.out.println("The typed name was " + name);
+       name = name.replaceAll(" ", "").toLowerCase();
+       int vowels = 0;
+       int consonants = 0;
+       int nameLength = name.length();
+       for (int i = 0; i < nameLength; i++){
+           char letter = name.charAt(i);
+           switch(letter){
+               case 'a': vowels++;break;
+               case 'e': vowels++;break;
+               case 'i': vowels++;break;
+               case 'o': vowels++;break;
+               case 'u': vowels++;break;
             }
         }
-       consoantes = nome.length() - vogais;
-       System.out.println("O nome digitado possui " + vogais + " vogais");
-       System.out.println("O nome digitado possui " + consoantes + " consoantes");
+       consonants = nameLength - vowels;
+       System.out.println("The typed name has " + vowels + " vowels and " + consonants + " consonants.");
    }
 
    public static double squareArea (double side){
