@@ -66,6 +66,164 @@ public class BibliotecaJH
        return result;
     }
 
+    public static int dividers(int num){
+      //returns the number of dividers of a number
+        int i = 0;
+        for (int predecessor = 1; predecessor <= num; predecessor++){
+            if (numero%antecessor == 0)
+                i++;
+        }
+        return i;
+   }
+
+   public static void dividers1(int num){
+     //returns the dividers of a number and their sum
+       System.out.print("\f");
+       int i = 0;
+       int predecessor = 1;
+
+       while (predecessor <= num){
+           if (num%predecessor == 0){
+               i++;
+               System.out.print(predecessor + " ");
+           }
+           antecessor++;
+       }
+       System.out.println("\n" + i);
+   }
+
+    public static void dividersSum(int num){
+      //receives a number and returns its dividers and the amount of dividers
+       System.out.print("\f");
+       int i = 0;
+       int antecessor = 1;
+       int sum = 0;
+       while (predecessor <= num){
+           if (num%predecessor == 0){
+               i++;
+               sum = predecessor + sum;
+           }
+           predecessor++;
+       }
+       System.out.println(sum);
+       System.out.println("\n" + i);
+   }
+
+    public static int sumFor(int num){
+      //receives a number and return the sum of its dividers using for loop
+       int i = 0;
+       int sum = 0;
+       for (int predecessor = 1; predecessor <= num; predecessor++){
+           if (num%predecessor == 0){
+               i++;
+               sum = antecessor + sum;
+           }
+       }
+       return sum;
+   }
+
+    public static boolean evenOdd(int num){
+      //boolean method to see if a number is even or odd
+        if(num%2==0){
+          return true;
+        }
+        else {
+          return false;
+        }
+    }
+
+     public static void evenOdd2(int num){
+       //same method as above but using void instead
+
+        if(num%2==0){
+           System.out.print("The number is even");
+        }
+        else{
+           System.out.print("The number is odd");
+        }
+    }
+
+    public static boolean divisor(int num1, int num2){ //retorna true ou falso se o num2 é divisivel pelo num1
+        if(num2%num1==0)
+            return true;
+        else
+            return false;
+    }
+
+    public static boolean multiplo(int num1, int num2){// retorna true ou false se o num1 for multiplo de 2. ex.: se 175 é multiplo de 5 = true
+        if(num1%num2==0)
+            return true;
+        else
+            return false;
+    }
+
+    public static void ordemCrescente(int num1, int num2, int num3){
+        if(num1 < num2 && num1 < num3 && num2 < num3)      System.out.print(num1 + "," + num2 + " e " + num3);
+            else if(num1 < num2 && num1 < num3 && num3 < num2) System.out.print(num1 + "," + num3 + " e " + num2);
+
+            else if(num2 < num1 && num2 < num3 && num1 < num3) System.out.print(num2 + "," + num1 + " e " + num3);
+            else if(num2 < num1 && num2 < num3 && num3 < num2) System.out.print(num2 + "," + num3 + " e " + num1);
+
+            else if(num3 < num1 && num3 < num2 && num2 < num3) System.out.print(num3 + "," + num2 + " e " + num3);
+            else if(num3 < num1 && num3 < num2 && num3 < num2) System.out.print(num3 + "," + num3 + " e " + num2);
+
+            else System.out.print("\fExistem valores iguais.");
+    }
+
+    public static void ordemDecrescente(int num1, int num2, int num3){
+        if(num1 > num2 && num1 > num3 && num2 > num3)      System.out.print(num1 + "," + num2 + " e " + num3);
+        else if(num1 > num2 && num1 > num3 && num3 > num2) System.out.print(num1 + "," + num3 + " e " + num2);
+
+        else if(num2 > num1 && num2 > num3 && num1 > num3) System.out.print(num2 + "," + num1 + " e " + num3);
+        else if(num2 > num1 && num2 > num3 && num3 > num2) System.out.print(num2 + "," + num3 + " e " + num1);
+
+        else if(num3 > num1 && num3 > num2 && num2 > num3) System.out.print(num3 + "," + num2 + " e " + num3);
+        else if(num3 > num1 && num3 > num2 && num3 > num2) System.out.print(num3 + "," + num1 + " e " + num2);
+
+        else System.out.print("\fExistem valores iguais.");
+    }
+
+   public static void signo(int dia, int mes){
+        if(dia >= 21 && mes == 3 || dia <=20 && mes == 4)        System.out.print("Áries");
+        else if(dia >= 21 && mes == 4  || dia <=20 && mes == 5)  System.out.print("Touro");
+        else if(dia >= 21 && mes == 5  || dia <=20 && mes == 6)  System.out.print("Gêmeos");
+        else if(dia >= 21 && mes == 6  || dia <=21 && mes == 7)  System.out.print("Câncer");
+        else if(dia >= 22 && mes == 7  || dia <=22 && mes == 8)  System.out.print("Leão");
+        else if(dia >= 23 && mes == 8  || dia <=21 && mes == 9)  System.out.print("Virgem");
+        else if(dia >= 22 && mes == 9  || dia <=22 && mes == 10) System.out.print("Libra");
+        else if(dia >= 23 && mes == 10 || dia <=21 && mes == 11) System.out.print("Escorpião");
+        else if(dia >= 22 && mes == 11 || dia <=21 && mes == 12) System.out.print("Sagitário");
+        else if(dia >= 22 && mes == 12 || dia <=20 && mes == 1)  System.out.print("Capricórnio");
+        else if(dia >= 22 && mes == 1  || dia <=19 && mes == 2)  System.out.print("Aquário");
+        else if(dia >= 20 && mes == 2  || dia <=20 && mes == 3)  System.out.print("Peixes");
+
+        else System.out.print("\fA data é inválida.");
+   }
+
+   public static void vogais(String args[]){//retorna a quantidade de vogais e consoantes de um nome
+       Scanner in = new Scanner(System.in);
+       System.out.println("\fDigite o nome");
+       String nome = in.nextLine();
+       System.out.println("O nome digitado foi " + nome);
+       nome = nome.replaceAll(" ", "").toLowerCase();
+       int vogais = 0;
+       int consoantes = 0;
+       int tamanho = nome.length();
+       for (int posicao = 0; posicao < tamanho; posicao++){
+           char letra = nome.charAt(posicao);
+           switch(letra){
+               case 'a': vogais++;break;
+               case 'e': vogais++;break;
+               case 'i': vogais++;break;
+               case 'o': vogais++;break;
+               case 'u': vogais++;break;
+            }
+        }
+       consoantes = nome.length() - vogais;
+       System.out.println("O nome digitado possui " + vogais + " vogais");
+       System.out.println("O nome digitado possui " + consoantes + " consoantes");
+   }
+
    public static double squareArea (double side){
      //returns the area of a square
         return side*side;
