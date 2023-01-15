@@ -1,12 +1,12 @@
 import java.util.*;
 public class BibliotecaJH
 {
-   public static double biggestTwo(double a, double b){
+   public double biggestTwo(double a, double b){
      //returns the biggest of two numbers
        return (a + b + Math.abs(a - b))/2;
    }
 
-   public static double biggestThree(double a, double b, double c){
+   public double biggestThree(double a, double b, double c){
      //returns the biggest of three numbers
         double aEb = (a + b + Math.abs(a - b))/2;
         if (aEb > c) {
@@ -16,7 +16,7 @@ public class BibliotecaJH
         }
    }
 
-   public static double biggest3(double a, double b, double c){
+   public double biggest3(double a, double b, double c){
      //another way of returning the biggest of 3 numbers
         if (a > b) {
             if (a > c){
@@ -33,7 +33,7 @@ public class BibliotecaJH
         }
    }
 
-   public static void bhaskara (String args[]){
+   public void bhaskara (String args[]){
      //calculates the bhaskara formule
         Scanner read = new Scanner(System.in);
         System.out.println("\fType a");
@@ -56,7 +56,7 @@ public class BibliotecaJH
         }
     }
 
-   public static int reverseNumber(int number){
+   public int reverseNumber(int number){
      //reverses the order of a number
        int cent = number/100;
        int rest = number%100;
@@ -66,7 +66,7 @@ public class BibliotecaJH
        return result;
     }
 
-    public static int dividers(int num){
+    public int dividers(int num){
       //returns the number of dividers of a number
         int i = 0;
         for (int predecessor = 1; predecessor <= num; predecessor++){
@@ -76,7 +76,7 @@ public class BibliotecaJH
         return i;
    }
 
-   public static void dividers1(int num){
+   public void dividers1(int num){
      //returns the dividers of a number and their sum
        System.out.print("\f");
        int i = 0;
@@ -92,7 +92,7 @@ public class BibliotecaJH
        System.out.println("\n" + i);
    }
 
-    public static void dividersSum(int num){
+    public void dividersSum(int num){
       //receives a number and returns its dividers and the amount of dividers
        System.out.print("\f");
        int i = 0;
@@ -109,7 +109,7 @@ public class BibliotecaJH
        System.out.println("\n" + i);
    }
 
-    public static int sumFor(int num){
+    public int sumFor(int num){
       //receives a number and return the sum of its dividers using for loop
        int i = 0;
        int sum = 0;
@@ -122,7 +122,7 @@ public class BibliotecaJH
        return sum;
    }
 
-    public static boolean evenOdd(int num){
+    public boolean evenOdd(int num){
       //boolean method to see if a number is even or odd
         if(num%2==0){
           return true;
@@ -131,7 +131,7 @@ public class BibliotecaJH
         }
     }
 
-     public static void evenOdd2(int num){
+     public void evenOdd2(int num){
        //same method as above but using void instead
 
         if(num%2==0){
@@ -141,7 +141,7 @@ public class BibliotecaJH
         }
     }
 
-    public static boolean divider(int num1, int num2){
+    public boolean divider(int num1, int num2){
        //returns true or false if num2 is divisible by num1
         if(num2%num1==0){
             return true;
@@ -150,7 +150,7 @@ public class BibliotecaJH
         }
     }
 
-    public static boolean multiple(int num1, int num2){
+    public boolean multiple(int num1, int num2){
       //returns true or false if num2 is a multiple of num2
         if(num1%num2==0){
             return true;
@@ -159,7 +159,7 @@ public class BibliotecaJH
           }
     }
 
-    public static void ascendingOrder(int num1, int num2, int num3){
+    public void ascendingOrder(int num1, int num2, int num3){
       //receives three numbers and returns them in ascending order
         if(num1 < num2 && num1 < num3 && num2 < num3) {System.out.print(num1 + "," + num2 + " e " + num3);}
             else if(num1 < num2 && num1 < num3 && num3 < num2){ System.out.print(num1 + "," + num3 + " e " + num2);}
@@ -170,7 +170,7 @@ public class BibliotecaJH
             else { System.out.print("\fThere are equal numbers");}
     }
 
-    public static void descendingOrder(int num1, int num2, int num3){
+    public void descendingOrder(int num1, int num2, int num3){
       //receives three numbers and returns them in descending order
         if(num1 > num2 && num1 > num3 && num2 > num3){ System.out.print(num1 + "," + num2 + " e " + num3);}
         else if(num1 > num2 && num1 > num3 && num3 > num2){ System.out.print(num1 + "," + num3 + " e " + num2);}
@@ -181,7 +181,7 @@ public class BibliotecaJH
         else { System.out.print("\fThere are equal numbers");}
     }
 
-   public static void sign(int day, int month){
+   public void sign(int day, int month){
      //receives a day and a month and returns the zodiac sign of that date
         if(day >= 21 && month == 3 || day <=20 && month == 4){       System.out.print("Aries");}
         else if(day >= 21 && month == 4  || day <=20 && month == 5){ System.out.print("Taurus");}
@@ -199,7 +199,7 @@ public class BibliotecaJH
         else{ System.out.print("\fThe date is invalid.");}
    }
 
-   public static void vowels(String args[]){
+   public void vowels(String args[]){
      //returns the amount of vowels and consonants of a name
        Scanner in = new Scanner(System.in);
        System.out.println("\fType in the name");
@@ -223,53 +223,53 @@ public class BibliotecaJH
        System.out.println("The typed name has " + vowels + " vowels and " + consonants + " consonants.");
    }
 
-   public static double squareArea (double side){
+   public double squareArea (double side){
      //returns the area of a square
         return side*side;
     }
 
-   public static double rectangleArea (double side1, double side2){
+   public double rectangleArea (double side1, double side2){
      //receives both sides of the rectangle and multiplies them
         return side1*side2;
     }
 
-   public static double circleArea (double radius){
+   public double circleArea (double radius){
      //receives the radius of a circle and returns the area
         return Math.PI*radius*radius;
 
     }
 
-   public static double triangleArea (double base, double height){
+   public double triangleArea (double base, double height){
      //receives the base and height of a triangle and returns its area
         return (base*height)/2.;
     }
 
-   public static double parallelepipedVolume(double side1, double side2,double side3){
+   public double parallelepipedVolume(double side1, double side2,double side3){
      //receives tne three sides of a parallelepiped and returns the volume
         return (side1*side2*side3);
     }
 
-   public static double pyramidVolume(double baseSide1,double baseSide2,double height){
+   public double pyramidVolume(double baseSide1,double baseSide2,double height){
      //receives the base sides and the height of a pyramid and returns the volume
         return (baseSide1*baseSide2*height)/3.;
     }
 
-   public static double cilinderVolume(double radius,double height){
+   public double cilinderVolume(double radius,double height){
      //receives the base radius and the height of a cilinder and returns its volume
         return (Math.PI*Math.pow(radius,2)*height);
     }
 
-   public static double sphereVolume(double radius){
+   public double sphereVolume(double radius){
      //receives the radius of a sphere and returns its volume
         return (4*Math.PI*Math.pow(radius,3)/3);
     }
 
-   public static double parallelepipedSurface(double side1, double side2,double side3){
+   public double parallelepipedSurface(double side1, double side2,double side3){
      // returns the surface area of a parallelepiped
         return (2*side1*side2+2*side1*side3+2*side2*side3);
     }
 
-   public static double pyramidSurface(double baseSide1,double baseSide2,double height){
+   public double pyramidSurface(double baseSide1,double baseSide2,double height){
      //receives the base sides and the height of a pyramid and returns its surface area
         double heightSide1 = Math.sqrt( Math.pow(baseSide1/2.,2) + Math.pow(height,2));
         double heightSide2 = Math.sqrt( Math.pow(baseSide2/2.,2) + Math.pow(height,2));
@@ -278,12 +278,12 @@ public class BibliotecaJH
         return (2*(areaTriangle1)+2*(areaTriangle2)+ baseSide1*baseSide2);
     }
 
-   public static double cilinderSurface(double radius,double height){
+   public double cilinderSurface(double radius,double height){
      //receives the base radius and the height of a cilinder and returns its surface area
         return (2*Math.PI*Math.pow(radius,2)+2*Math.PI*radius*height);
     }
 
-   public static double sphereSurface(double radius){
+   public double sphereSurface(double radius){
      //receives the radius of a sphere and returns its volume
         return (4*Math.PI*Math.pow(radius,2));
     }
