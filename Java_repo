@@ -87,7 +87,63 @@ public class BibliotecaJH{
       return diag;
     }
 
+    public double[] secondaryDouble(double[][] matrix){
+      //prints the secondary diagonal of a square matrix of doubles and returns an array with these terms
+      double [] diag = new double[matrix.length];
+      System.out.print("\n|");
+      for (int i = 0; i < matrix.length; i++){
+        diag[i] = matrix[i][matrix[i].length-i-1];
+        System.out.print("|" + matrix[i][matrix[i].length-i-1] + "|")
+      }
+      return diag;
+    }
 
+    public boolean diagonalMatrixInt(int[][] matrix){
+      //checks if a matrix is diagonal(int)
+
+      for (int i = 0; i < matrix.length; i++){
+        for (int j = o; j < matrix[i].length; j++){
+          i (i!=j){
+            if (matrix[i][j]!=0){
+              return false;
+            }
+          }
+        }
+      }
+      return true;
+    }
+
+    public boolean diagonalMatrixDouble(double[][] matrix){
+      //checks if a matrix is diagonal(double)
+
+      for (int i = 0; i < matrix.length; i++){
+        for (int j = o; j < matrix[i].length; j++){
+          if (i!=j){
+            if (matrix[i][j]!=0){
+              return false;
+            }
+          }
+        }
+      }
+      return true;
+    }
+
+    public boolean unitMatrixInt(int[][] matrix){
+      //checks if the matrix is a unit matrix(int)
+
+      for (int i = 0; i < matrix.length; i++){
+        for (int j = o; j < matrix[i].length; j++){
+          if (i==j){
+            if (matrix[i][j]!=1){
+              return false;
+            }
+          } else if (matrix[i][j]!=0){
+              return false;
+          }
+        }
+      }
+      return true;
+    }
     //numbers and formulas 
 
    public double biggestTwo(double a, double b){
