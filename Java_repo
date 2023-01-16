@@ -16,6 +16,33 @@ public class BibliotecaJH{
     System.out.print("\n The circle's circumference is: "+ circumference);
 
  }
+
+    //matrix 
+  
+
+    public void printMatrixInt(int [][]m){
+      for (int i = 0; i < m.length(); i++){
+        System.out.print("\n this is the line" + (i + 1) + " --> "); 
+        for (int j = 0; j < m[0].length; j++){
+          System.out.print("[" + m[i][j] + "]" + " ");
+        }
+        System.out.print();
+      }
+    }
+
+    public void printMatrixDouble( double [][]m){
+      for (int i = 0; i < m.length(); i++){
+        System.out.print("\n this is the line" + (i + 1) + " --> "); 
+        for (int j = 0; j < m[0].length; j++){
+          System.out.print(" " + m[i][j] + " ");
+        }
+        System.out.print();
+      }
+    }
+
+
+    //numbers and formulas 
+
    public double biggestTwo(double a, double b){
      //returns the biggest of two numbers
        return (a + b + Math.abs(a - b))/2;
@@ -225,6 +252,8 @@ public class BibliotecaJH{
         else{ System.out.print("\fThe date is invalid.");}
    }
 
+   //Strings and words
+
    public void vowels(String args[]){
      //returns the amount of vowels and consonants of a name
        Scanner in = new Scanner(System.in);
@@ -248,6 +277,31 @@ public class BibliotecaJH{
        consonants = nameLength - vowels;
        System.out.println("The typed name has " + vowels + " vowels and " + consonants + " consonants.");
    }
+   public void smallerString(String str1, String str2){
+      //receives two strings and prints the smallest of them
+
+      int qnt1 = 0;
+      int qnt2 = 0;
+
+      for (int i = 0; i < str1.length(); i++){
+        if (str1.charAt(i) == ' '){
+          qnt1++;
+        }
+      }
+
+      for (int i = 0; i < str2.length(); i++){
+        if (str2.charAt(i) == ' '){
+          qnt2++;
+        }
+      }
+
+      if (qnt1 < qnt2){
+        System.out.print(str1);
+      } else {
+        System.out.print(str2);
+      }
+   }
+
 
    //Geometric shapes
 
