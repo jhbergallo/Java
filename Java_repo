@@ -144,7 +144,58 @@ public class BibliotecaJH{
       }
       return true;
     }
+
+    public int [][] matrixSumInt(int[][] matrix1, int[][] matrix2){
+      //sums the elements of two integer matrices of the same size
+
+      for (int i = 0; i < matrix1.length; i++){
+        matrix1[i] = arraySumInt(matrix1[i], matrix2[i]);
+      }
+      return matrix1;
+    }
+
+    public int [][] matrixSumDouble(double[][] matrix1, double[][] matrix2){
+      //sums the elements of two double matrices of the same size
+
+      for (int i = 0; i < matrix1.length; i++){
+        matrix1[i] = arraySumDouble(matrix1[i], matrix2[i]);
+      }
+      return matrix1;
+    }
+
+    public int[][] matrixProductInt(int[][] matrix1, int[][] matrix2){
+      //multiplies the elements of two integer matrices of the same size
+
+      for (int i = 0; i < matrix1.length; i++){
+        matrix1[i] = arrayProductInt(matrix1[i], matrix2[i]);
+      }
+      return matrix1;
+    }
+
+    public int[][] matrixProductDouble(int[][] matrix1, int[][] matrix2){
+      //multiplies the elements of two integer matrices of the same size
+
+      for (int i = 0; i < matrix1.length; i++){
+        matrix1[i] = arrayProductDouble(matrix1[i], matrix2[i]);
+      }
+      return matrix1;
+    }
+
+
+
+    //array
+
+
+
+    
+
+
+
+
     //numbers and formulas 
+
+
+
 
    public double biggestTwo(double a, double b){
      //returns the biggest of two numbers
