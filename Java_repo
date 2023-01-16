@@ -109,6 +109,17 @@ public class BibliotecaJH
        System.out.println("\n" + i);
    }
 
+   public int dividersAmount(int num){ 
+      //receives an integer number and returns its amount of dividers using a for loop
+                
+      int count = 0;                 
+      for (int predecessor = 1; predecessor <= num; predecessor++){
+        if (num%predecessor == 0)
+            count++; 
+        } 
+        return count;
+  }
+
     public int sumFor(int num){
       //receives a number and return the sum of its dividers using for loop
        int i = 0;
@@ -223,6 +234,8 @@ public class BibliotecaJH
        System.out.println("The typed name has " + vowels + " vowels and " + consonants + " consonants.");
    }
 
+   //Geometric shapes
+
    public double squareArea (double side){
      //returns the area of a square
         return side*side;
@@ -243,6 +256,27 @@ public class BibliotecaJH
      //receives the base and height of a triangle and returns its area
         return (base*height)/2.;
     }
+
+    public boolean confirmTriangle(double side1, double side2, double side3){
+      //receives the values of three sides and returns a boolean value if it is a triangle
+        if(side1 <= 0 || side2 <= 0 || side3 <= 0){
+        return false;
+        } else{ 
+          return true;
+          }
+    }
+
+    public void triangleType(double side1, double side2, double side3){
+        if (side1 >= 0 && side2 >= 0 && side3 >= 0){
+            if(side1 == side2 && side1 == side3 && side2 == side3)
+                System.out.print("\fThe triangle is equilateral.");
+            else if (side1 != side2 && side1 != side3 && side2 != side3)
+                System.out.print("\fThe triangle is scalene.");
+            else if (side1 == side2 || side2 == side3 || side1 == side3)
+                System.out.print("\fThe triangle is isosceles.");
+        
+        }else System.out.print("\fThis is not a triangle.");
+                }
 
    public double parallelepipedVolume(double side1, double side2,double side3){
      //receives tne three sides of a parallelepiped and returns the volume
