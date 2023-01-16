@@ -187,7 +187,110 @@ public class BibliotecaJH{
 
 
 
-    
+    public int[] arraySum(int[] array1, int[] array2){
+      
+      int[] arrayS = new int[array1.length];
+      for (int i = 0; i < array1.length; i++){
+          arrayS[i] = array1[i] + array2[i];
+      }
+      return arrayS;
+    }
+
+    public int[] arraySumInt(int[] array1, int[] array2){
+      //sums the elements of two integer arrays
+
+      if (array1.length < array2.length){
+        int[] aux = array1;
+        array1 = array2;
+        array2 = aux;
+      }
+      for (int i = 0; i < array1.length; i++){
+          array1[i] = array1[i] + array2[i];
+      }
+      return array1;
+    }
+
+    public int[] arraySumDouble(double[] array1, double[] array2){
+      //sums the elements of two double arrays
+
+      if (array1.length < array2.length){
+        double[] aux = array1;
+        array1 = array2;
+        array2 = aux;
+      }
+      for (int i = 0; i < array1.length; i++){
+          array1[i] = array1[i] + array2[i];
+      }
+      return array1;
+    }
+
+    public int[] arrayProductInt(int[] array1, int[] array2){
+      //multiplies the elements of integer two arrays and generates it in another array
+
+      if (array1.length < array2.length){
+        int[] aux = array1;
+        array1 = array2;
+        array2 = aux;
+      }
+      for (int i = 0; i < array1.length; i++){
+        array1[i] = array1[i] * array2[[i]];
+      }
+      return array1;
+    }
+
+    public int[] arrayProductDouble(double[] array1, double[] array2){
+      //multiplies the elements of double two arrays and generates it in another array
+
+      if (array1.length < array2.length){
+        double[] aux = array1;
+        array1 = array2;
+        array2 = aux;
+      }
+      for (int i = 0; i < array1.length; i++){
+        array1[i] = array1[i] * array2[[i]];
+      }
+      return array1;
+    }
+
+    public int scalarProduct(int[] array1, int[] array2){
+      //receives two arrays and returns the scalar product or dot product of those arrays
+
+      int sum = 0;
+      
+      for (int i = 0; i < array1.length; i++){
+        sum = sum + array1[i] * array2[i];
+      }
+      return sum;
+    }
+
+    public int[] smallerInArray(int [] array){
+      //receives an array and returns its smallest number 
+
+      int small = array[0];
+      
+      for (int i = 1; i < array.length; i++){
+        if (array[i] < small){
+          small = array[i];
+        }
+      }
+      return small;
+    }
+
+    public int frequency(int[] array){
+      //receives an array and returns the frequency of the smallest number stored in it
+
+      int small = smallerInArray(array);
+      int sum = 0;
+
+      for (int i = 1; i < array.length; i++){
+        if (array[i] == small){
+          sum++;
+        }
+      }
+      return sum;
+    }
+
+
 
 
 
