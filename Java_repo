@@ -40,6 +40,53 @@ public class BibliotecaJH{
       }
     }
 
+    public void printMatrixStr(String [][]m){
+      for (int i = 0; i < m.length(); i++){
+        System.out.print("\n this is the line" + (i + 1) + " --> "); 
+        for (int j = 0; j < m[0].length; j++){
+          System.out.print(m[i][j] + " ");
+        }
+        System.out.print();
+    }
+
+    public int[] diagonalInt(int[][] matrix){
+      //prints the main diagonal of a square matrix and returns an array with its terms
+
+      int[] diag = new int[matrix.length];
+      System.out.print("\n|");
+      for (int i = 0; i < matrix.length; i++){
+        diag[i] = matrix[i][i];
+        System.out.print("|" + matrix[i][i] + "|");
+      }
+      System.out.print("|");
+      return diag;
+    }
+
+    public double[] diagonalDouble(double[][] matrix){
+      //prints the main diagonal of a square matrix of doubles and returns an array with these terms
+
+      double[] diag = new double[matrix.length];
+      System.out.print("\n|");
+      for (int i = 0; i < matrix.length; i++){
+        diag[i] = matrix[i][i];
+        System.out.print("|" + matrix[i][i] + "|");
+      }
+      System.out.print("|");
+      return diag;
+    }
+
+    public int[] secondaryInt(int[][] matrix){
+      //prints the secondary diagonal of a square matrix of integers and returns an array with these terms
+
+      int [] diag = new int[matrix.length];
+      System.out.print("\n|");
+      for (int i = 0; i < matrix.length; i++){
+        diag[i] = matrix[i][matrix[i].length-i-1];
+        System.out.print("|" + matrix[i][matrix[i].length-i-1] + "|")
+      }
+      return diag;
+    }
+
 
     //numbers and formulas 
 
