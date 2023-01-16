@@ -1,6 +1,21 @@
 import java.util.*;
-public class BibliotecaJH
-{
+public class BibliotecaJH{
+
+  public static void main(String args[]){
+                
+    Scanner in=new Scanner(System.in);
+    System.out.println("\f");
+    System.out.println("\n Type in the radius size= ");
+    
+    double radius2=in.nextDouble();
+    
+    System.out.print("\n The circle area is: "+ circleArea(radius2));
+    
+    double circumference=2*Math.PI*radius2;
+    
+    System.out.print("\n The circle's circumference is: "+ circumference);
+
+ }
    public double biggestTwo(double a, double b){
      //returns the biggest of two numbers
        return (a + b + Math.abs(a - b))/2;
