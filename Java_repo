@@ -290,6 +290,67 @@ public class BibliotecaJH{
       return sum;
     }
 
+    public double[] arrayUnionDouble(double[] array1, double[] array2){
+      //makes the union between two arrays, assuming that the elements aren't repeated inside their own array
+
+      int count = 0;
+      double[] temp = new double[array2.length];
+      int tempIndex = 0;
+
+      int size1 = array1.length;
+      int size2 = array2.length;
+
+      boolean single = true;
+      for (int i = 0; i < size2; i++){
+        for (int j = 0; j < size1; j++){
+          if (array2[i] == array1[j]){
+            count++;
+            single = false;
+          }
+        }
+        if (single){
+          temp[tempIndex] = array2[i];
+
+          tempIndex++;
+        }
+        single = true;
+      }
+
+      double[] array3 = new double[size1 + size2 - count];
+
+      for (int i = 0; i < size1; i++){
+        array3[i] = array1[i];
+      }
+      for (int i = 0; i < (size2 - count); i++){
+        array3[size1 + i] = temp[i];
+      }
+      return array3;
+    }
+
+    public int[] arrayIntersection(int[] array1, int[] array2){
+      //makes the intersection between two integer arrays, assuming that no elements are repeated inside their own array
+
+      int[] temp = new int[array1.length];
+
+      int tempIndex = 0;
+
+      for (int i = 0; i < array1.length; i++){
+        for (int j = 0; j < array2.length; j++){
+          temp[tempIndex] = array1[i];
+          tempIndex++;
+          break;
+        }
+      }
+
+      int[] array3 = new int[tempIndex];
+
+      for (int i = 0; i < tempIndex; i++){
+        array3[i] = temp[i];
+      }
+      return array3;
+    }
+
+
 
 
 
