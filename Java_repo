@@ -350,10 +350,28 @@ public class BibliotecaJH{
       return array3;
     }
 
+    public double[] arrayIntersectionDouble(int[] array1, int[] array2){
+      //makes the intersection between two double arrays, assuming that no elements are repeated inside their own array
 
+      double[] temp = new double[array1.length];
 
+      int tempIndex = 0;
 
+      for (int i = 0; i < array1.length; i++){
+        for (int j = 0; j < array2.length; j++){
+          temp[tempIndex] = array1[i];
+          tempIndex++;
+          break;
+        }
+      }
 
+      double[] array3 = new double[tempIndex];
+
+      for (int i = 0; i < tempIndex; i++){
+        array3[i] = temp[i];
+      }
+      return array3;
+    }
 
 
     //numbers and formulas 
